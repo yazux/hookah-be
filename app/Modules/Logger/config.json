@@ -1,0 +1,28 @@
+{
+  "module_name": "logger",
+  "description": "Logger module",
+  "properties": {
+  },
+  "dependencies": [],
+  "public_actions": [
+    "logger_access",
+    "logger_view"
+  ],
+  "actions": {
+    "logger_access": {
+      "code": "logger_access",
+      "name": "Доступ к модулю",
+      "description": ""
+    },
+    "logger_view": {
+      "code": "logger_view",
+      "name": "Просмотр логов",
+      "description": ""
+    },
+    "logger_remove": {
+      "code": "logger_remove",
+      "name": "Удаление логов",
+      "description": ""
+    }
+  }
+}

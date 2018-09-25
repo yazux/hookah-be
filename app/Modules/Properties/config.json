@@ -1,0 +1,123 @@
+{
+  "module_name": "properties",
+  "description": "Properties module",
+  "properties": {
+  },
+  "entity": {
+    "properties": {
+      "code": "properties",
+      "model": "App\\Modules\\Properties\\Model\\Properties",
+      "name": "Свойства"
+    },
+    "choice": {
+      "code": "choice",
+      "model": "App\\Modules\\Properties\\Model\\PropertiesChoices",
+      "name": "Варианты значения свойства"
+    },
+    "prop_value": {
+      "code": "prop_value",
+      "model": "App\\Modules\\Properties\\Model\\PropertiesValues",
+      "name": "Варианты значения свойства"
+    },
+    "file": {
+      "code": "file",
+      "model": "App\\Modules\\Properties\\Model\\Files",
+      "name": "Файлы, загружаемые на сервер"
+    }
+  },
+  "dependencies": [],
+  "public_actions": [
+    "properties_access",
+    "properties_view_property",
+    "properties_view_property_choices",
+    "properties_add_property_values",
+    "properties_put_property_values",
+    "properties_delete_property_values",
+    "properties_view_property_values",
+    "properties_add_files",
+    "properties_delete_files",
+    "properties_view_files"
+  ],
+  "actions": {
+    "properties_access": {
+      "code": "properties_access",
+      "name": "Доступ к модулю",
+      "description": ""
+    },
+    "properties_add_property": {
+      "code": "properties_add_property",
+      "name": "Добавление свойств к сущностям",
+      "description": ""
+    },
+    "properties_put_property": {
+      "code": "properties_put_property",
+      "name": "Изменение свойств у сущностей",
+      "description": ""
+    },
+    "properties_delete_property": {
+      "code": "properties_delete_property",
+      "name": "Удаление свойств сущностей",
+      "description": ""
+    },
+    "properties_view_property": {
+      "code": "properties_view_property",
+      "name": "Просмотр списка свойств сущности",
+      "description": ""
+    },
+    "properties_add_property_choices": {
+      "code": "properties_add_property_choices",
+      "name": "Добавление вариантов выбора к свойствам сущностей",
+      "description": ""
+    },
+    "properties_put_property_choices": {
+      "code": "properties_put_property_choices",
+      "name": "Изменение вариантов выбора у свойств сущностей",
+      "description": ""
+    },
+    "properties_delete_property_choices": {
+      "code": "properties_delete_property_choices",
+      "name": "Удаление вариантов выбора у свойств сущностей",
+      "description": ""
+    },
+    "properties_view_property_choices": {
+      "code": "properties_view_property_choices",
+      "name": "Просмотр вариантов выбора у свойств сущностей",
+      "description": ""
+    },
+    "properties_add_property_values": {
+      "code": "properties_add_property_values",
+      "name": "Добавление значений свойств сущностей",
+      "description": ""
+    },
+    "properties_put_property_values": {
+      "code": "properties_put_property_values",
+      "name": "Изменение значений свойств сущностей",
+      "description": ""
+    },
+    "properties_delete_property_values": {
+      "code": "properties_delete_property_values",
+      "name": "Удаление значений свойств сущностей",
+      "description": ""
+    },
+    "properties_view_property_values": {
+      "code": "properties_view_property_values",
+      "name": "Просмотр значений свойств сущностей",
+      "description": ""
+    },
+    "properties_add_files": {
+      "code": "properties_add_files",
+      "name": "Загрузка файлов на сервер",
+      "description": ""
+    },
+    "properties_delete_files": {
+      "code": "properties_delete_files",
+      "name": "Удаление файлов с сервера",
+      "description": ""
+    },
+    "properties_view_files": {
+      "code": "properties_view_files",
+      "name": "Просмотр данных файлов и скачивание",
+      "description": ""
+    }
+  }
+}

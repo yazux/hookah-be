@@ -1,0 +1,127 @@
+{
+  "module_name": "user",
+  "description": "User module",
+  "properties": {},
+  "entity": {
+    "users": {
+      "code": "users",
+      "model": "App\\Modules\\User\\Model\\User",
+      "name": "Пользователи"
+    },
+    "action": {
+      "code": "action",
+      "model": "App\\Modules\\User\\Model\\Action",
+      "name": "Действия пользователей"
+    },
+    "group": {
+      "code": "group",
+      "model": "App\\Modules\\User\\Model\\Group",
+      "name": "Группы пользователей"
+    }
+  },
+  "dependencies": [],
+  "public_actions": [
+    "user_access",
+    "user_addusers",
+    "user_putusers",
+    "user_viewusers",
+    "user_viewgroup",
+    "user_getresetemail",
+    "user_resetpassword",
+    "user_breakpassword"
+  ],
+  "actions": {
+    "user_access": {
+      "code": "user_access",
+      "name": "Доступ к модулю",
+      "description": ""
+    },
+
+    "user_breakpassword": {
+      "code": "user_breakpassword",
+      "name": "Сброс пароля пользователя",
+      "description": "Пользователь сбросил пароль при помощи почты"
+    },
+
+    "user_addusers": {
+      "code": "user_addusers",
+      "name": "Добавление пользователя",
+      "description": "Возможность добавлять новых пользователей"
+    },
+    "user_removeusers": {
+      "code": "user_removeusers",
+      "name": "Удаление пользователя",
+      "description": "Возможность удалять пользователей"
+    },
+    "user_putusers": {
+      "code": "user_putusers",
+      "name": "Редактирование пользователя",
+      "description": "Возможность редактировать параметры пользователей"
+    },
+    "user_viewusers": {
+      "code": "user_viewusers",
+      "name": "Просмотр списка и данных пользователя",
+      "description": ""
+    },
+    "user_attachusertogroup": {
+      "code": "user_attachusertogroup",
+      "name": "Добавление пользователя в группу",
+      "description": ""
+    },
+    "user_detachuserfromgroup": {
+      "code": "user_detachuserfromgroup",
+      "name": "Удаление пользователя из группы",
+      "description": ""
+    },
+    "user_addgroup": {
+      "code": "user_addgroup",
+      "name": "Добавление группы пользователей",
+      "description": ""
+    },
+    "user_putgroup": {
+      "code": "user_putgroup",
+      "name": "Изменений свойств групп пользователей",
+      "description": ""
+    },
+    "user_removegroup": {
+      "code": "user_removegroup",
+      "name": "Удаление группы пользователей",
+      "description": ""
+    },
+    "user_viewgroup": {
+      "code": "user_viewgroup",
+      "name": "Просмотр групп пользователей",
+      "description": ""
+    },
+    "user_viewactions": {
+      "code": "user_viewactions",
+      "name": "Просмотр действий пользователей",
+      "description": ""
+    },
+    "user_addactions": {
+      "code": "user_addactions",
+      "name": "Добавление действия пользователей",
+      "description": ""
+    },
+    "user_putactions": {
+      "code": "user_putactions",
+      "name": "Изменение действия пользователей",
+      "description": ""
+    },
+    "user_removeactions": {
+      "code": "user_removeactions",
+      "name": "Удаление действия пользователей",
+      "description": ""
+    },
+    "user_getresetemail": {
+      "code": "user_getresetemail",
+      "name": "Запрос сообщения со сбросом пароля для пользователя",
+      "description": ""
+    },
+    "user_resetpassword": {
+      "code": "user_resetpassword",
+      "name": "Сброс пароля для пользователя",
+      "description": ""
+    }
+  }
+}

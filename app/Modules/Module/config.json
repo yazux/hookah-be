@@ -1,0 +1,229 @@
+{
+  "module_name": "module",
+  "description": "General module",
+  "dependencies": [],
+  "properties": {
+
+    "header_phone":{
+      "name": "Номер телефона для шапки сайта",
+      "code": "header_phone",
+      "placeholder": "8 (800) 222-81-28",
+      "type": "text",
+      "multiply": false,
+      "default_value": "8 (800) 222-81-28",
+      "values": []
+    },
+    "help_link":{
+      "name": "Абсолютная на страницу помощи",
+      "code": "help_link",
+      "placeholder": "",
+      "type": "text",
+      "multiply": false,
+      "default_value": "/support",
+      "values": []
+    },
+
+
+    "test_file":{
+      "name": "Тестовый файл",
+      "code": "test_file",
+      "placeholder": "Приложите файл",
+      "type": "file",
+      "multiply": false,
+      "default_value": "",
+      "values": []
+    },
+    "test_textarea":{
+      "name": "Тестовое поле ввода",
+      "code": "test_textarea",
+      "placeholder": "Тестовое поле ввода",
+      "type": "textarea",
+      "multiply": false,
+      "default_value": "",
+      "values": []
+    },
+    "test_select":{
+      "name": "Тестовый select",
+      "code": "test_select",
+      "placeholder": "Тестовый select",
+      "type": "select",
+      "multiply": false,
+      "default_value": true,
+      "values": {
+        "value1": "значение 1",
+        "value2": "значение 2",
+        "value3": "значение 3"
+      }
+    },
+    "test_select2":{
+      "name": "Тестовый select2",
+      "code": "test_select2",
+      "placeholder": "Тестовый select2",
+      "type": "select",
+      "multiply": true,
+      "default_value":  [
+        "value1",
+        "value3"
+      ],
+      "values": {
+        "value1": "значение 1",
+        "value2": "значение 2",
+        "value3": "значение 3",
+        "value4": "значение 4"
+      }
+    },
+    "testinput":{
+      "name": "Тестовый инпут",
+      "code": "testinput",
+      "placeholder": "Тестовый инпут",
+      "type": "text",
+      "multiply": false,
+      "default_value": "default test input value",
+      "values": []
+    },
+    "checkbox1":{
+      "name": "Тестовый чекбокс",
+      "code": "checkbox1",
+      "placeholder": "Тестовый чекбокс",
+      "type": "checkbox",
+      "multiply": false,
+      "default_value": true,
+      "values": {
+        "value1": "значение 1"
+      }
+    },
+    "test_mul_checkbox":{
+      "name": "Тестовый множественный checkbox",
+      "code": "test_mul_checkbox",
+      "placeholder": "test_mul_checkbox",
+      "type": "checkbox",
+      "multiply": true,
+      "default_value": [
+        "value1",
+        "value3"
+      ],
+      "values": {
+        "value1": "значение 1",
+        "value2": "значение 2",
+        "value3": "значение 3",
+        "value4": "значение 4"
+      }
+    },
+    "test_int":{
+      "name": "Тестовое число",
+      "code": "test_int",
+      "placeholder": "Тестовое число",
+      "type": "number",
+      "multiply": false,
+      "default_value": "0",
+      "values": {}
+    },
+    "test_radio":{
+      "name": "Радио кнопка",
+      "code": "test_radio",
+      "placeholder": "Радио кнопка",
+      "type": "radio",
+      "multiply": false,
+      "default_value": "value1",
+      "values": {
+        "value1": "значение 1",
+        "value2": "значение 2",
+        "value3": "значение 3",
+        "value4": "значение 4"
+      }
+    }
+  },
+  "entity": {
+    "module": {
+      "code": "module",
+      "model": "App\\Modules\\Module\\Model\\Module",
+      "name": "Модуль"
+    },
+    "module_prop": {
+      "code": "module_prop",
+      "model": "App\\Modules\\Module\\Model\\Module",
+      "name": "Свойства модулей"
+    }
+  },
+  "public_actions": [
+    "module_access",
+    "module_viewemodule",
+    "module_viewemoduleprop",
+    "module_viewemoduleactions",
+    "module_viewemoduleentity",
+    "module_viewemoduleconfig",
+    "module_setmoduleprop"
+  ],
+  "actions": {
+    "module_access": {
+      "code": "module_access",
+      "name": "Доступ к модулю",
+      "description": ""
+    },
+    "module_activate_deactivate": {
+      "code": "module_activate_deactivate",
+      "name": "Активирование и деактивация модулей",
+      "description": "Пользователь сможет включать и выключать активность модулей"
+    },
+    "module_createmodule": {
+      "code": "module_createmodule",
+      "name": "Создание модулей",
+      "description": ""
+    },
+    "module_removeemodule": {
+      "code": "module_removeemodule",
+      "name": "Удаление модулей",
+      "description": ""
+    },
+    "module_putemodule": {
+      "code": "module_putemodule",
+      "name": "Изменение модуля",
+      "description": ""
+    },
+    "module_viewemodule": {
+      "code": "module_viewemodule",
+      "name": "Просмотр подулей",
+      "description": ""
+    },
+    "module_viewemoduleprop": {
+      "code": "module_viewemoduleprop",
+      "name": "Просмотр свойств модуей",
+      "description": ""
+    },
+    "module_viewemoduleactions": {
+      "code": "module_viewemoduleactions",
+      "name": "Просмотр действий модулей",
+      "description": ""
+    },
+    "module_viewemoduleentity": {
+      "code": "module_viewemoduleentity",
+      "name": "Просмотр сущностей модулей",
+      "description": ""
+    },
+    "module_viewemoduleconfig": {
+      "code": "module_viewemoduleconfig",
+      "name": "Просмотр кофигов модуей",
+      "description": ""
+    },
+    "module_setmoduleprop": {
+      "code": "module_setmoduleprop",
+      "name": "Установка значений свойств модуей",
+      "description": ""
+    },
+    "module_putmoduleprop": {
+      "code": "module_putmoduleprop",
+      "name": "Изменений значений свойств модуей",
+      "description": ""
+    },
+    "module_removemoduleprop": {
+      "code": "module_removemoduleprop",
+      "name": "Удаление значений свойств модуей",
+      "description": ""
+    },
+    "module_admin": {
+      "code": "module_admin",
+      "name": "Любое админское действие",
+      "description": ""
+    }
+  }
+}

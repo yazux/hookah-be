@@ -1,0 +1,160 @@
+{
+  "module_name": "hookah",
+  "description": "Hookah module",
+  "properties": {},
+  "entity": {
+    "vendors": {
+      "code": "vendors",
+      "model": "App\\Modules\\Hookah\\Model\\Vendors",
+      "name": "Пользователи"
+    },
+    "line": {
+      "code": "line",
+      "model": "App\\Modules\\Hookah\\Model\\Line",
+      "name": "Линейки табака"
+    },
+    "Tobacco": {
+      "code": "tobacco",
+      "model": "App\\Modules\\Hookah\\Model\\Tobacco",
+      "name": "Табак"
+    },
+    "Category": {
+      "code": "category",
+      "model": "App\\Modules\\Hookah\\Model\\Category",
+      "name": "Категория"
+    },
+    "Mix": {
+      "code": "mix",
+      "model": "App\\Modules\\Hookah\\Model\\Mix",
+      "name": "Микс"
+    }
+  },
+  "dependencies": [],
+  "public_actions": [
+    "hookah_access",
+    "hookah_viewvendor",
+    "hookah_viewcategory",
+    "hookah_viewline",
+    "hookah_viewtobacco",
+    "hookah_viewmix"
+  ],
+  "actions": {
+    "hookah_access": {
+      "code": "hookah_access",
+      "name": "Доступ к модулю",
+      "description": ""
+    },
+
+    
+    "hookah_postvendor": {
+      "code": "hookah_postvendor",
+      "name": "Добавление поставщика табака",
+      "description": ""
+    },
+    "hookah_putvendor": {
+      "code": "hookah_putvendor",
+      "name": "Изменение поставщика табака",
+      "description": ""
+    },
+    "hookah_deletevendor": {
+      "code": "hookah_deletevendor",
+      "name": "Удаление поставщика табака",
+      "description": ""
+    },
+    "hookah_viewvendor": {
+      "code": "hookah_viewvendor",
+      "name": "Просмотр поставщика табака",
+      "description": ""
+    },
+
+
+    "hookah_postline": {
+      "code": "hookah_postline",
+      "name": "Добавление линейки табака",
+      "description": ""
+    },
+    "hookah_putline": {
+      "code": "hookah_putline",
+      "name": "Изменение линейки табака",
+      "description": ""
+    },
+    "hookah_deleteline": {
+      "code": "hookah_deleteline",
+      "name": "Удаление линейки табака",
+      "description": ""
+    },
+    "hookah_viewline": {
+      "code": "hookah_viewline",
+      "name": "Просмотр линейки табака",
+      "description": ""
+    },
+
+
+
+    "hookah_posttobacco": {
+      "code": "hookah_posttobacco",
+      "name": "Добавление табака",
+      "description": ""
+    },
+    "hookah_puttobacco": {
+      "code": "hookah_puttobacco",
+      "name": "Изменение табака",
+      "description": ""
+    },
+    "hookah_deletetobacco": {
+      "code": "hookah_deletetobacco",
+      "name": "Удаление табака",
+      "description": ""
+    },
+    "hookah_viewtobacco": {
+      "code": "hookah_viewtobacco",
+      "name": "Просмотр табака",
+      "description": ""
+    },
+
+
+    "hookah_postcategory": {
+      "code": "hookah_postcategory",
+      "name": "Добавление категории",
+      "description": ""
+    },
+    "hookah_putcategory": {
+      "code": "hookah_putcategory",
+      "name": "Изменение категории",
+      "description": ""
+    },
+    "hookah_deletecategory": {
+      "code": "hookah_deletecategory",
+      "name": "Удаление категории",
+      "description": ""
+    },
+    "hookah_viewcategory": {
+      "code": "hookah_viewcategory",
+      "name": "Просмотр категории",
+      "description": ""
+    },
+
+
+
+    "hookah_postmix": {
+      "code": "hookah_postmix",
+      "name": "Добавление микса",
+      "description": ""
+    },
+    "hookah_putmix": {
+      "code": "hookah_putmix",
+      "name": "Изменение микса",
+      "description": ""
+    },
+    "hookah_deletemix": {
+      "code": "hookah_deletemix",
+      "name": "Удаление микса",
+      "description": ""
+    },
+    "hookah_viewmix": {
+      "code": "hookah_viewmix",
+      "name": "Просмотр микса",
+      "description": ""
+    }
+  }
+}

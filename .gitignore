@@ -1,0 +1,10 @@
+/.idea
+/.env
+/.vscode
+/vendor
+/node_modules
+/storage
+Homestead.json
+Homestead.yaml
+docker-kill.sh
+docker.sh
