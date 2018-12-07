@@ -66,7 +66,7 @@ class Mix extends BaseModel
      */
     public function getStowageAttribute($value)
     {
-        return json_decode($value, true);
+        return (is_string($value)) ? json_decode($value, true) : $value;
     }
 
     /**
@@ -89,6 +89,19 @@ class Mix extends BaseModel
         return $this->belongsToMany(
             'App\Modules\Hookah\Model\Category',
             'module_hookah_mix_category', 'mix_id', 'category_id'
+        );
+    }
+
+    /**
+     * Связь с пользователями (закладки)
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function bookmarks()
+    {
+        return $this->belongsToMany(
+            'App\Modules\User\Model\User',
+            'module_hookah_bookmark', 'mix_id', 'user_id'
         );
     }
 

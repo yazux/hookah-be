@@ -42,7 +42,8 @@ class User extends BaseModel
     public $rules = [
         'login'       => 'required|alpha_dash|max:255|unique:module_users,login',
         'email'       => 'required|email|max:255|unique:module_users,email',
-        'sort'        => 'required|integer',
+
+        'sort'        => 'integer|nullable',
         'hero_image_id'  => 'nullable|integer|min:1',
         'name'        => 'nullable|alpha|min:1|max:100',
         'surname'     => 'nullable|alpha|min:1|max:100',

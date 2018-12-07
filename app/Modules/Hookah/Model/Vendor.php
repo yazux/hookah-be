@@ -23,8 +23,8 @@ class Vendor extends BaseModel
         'name'          => 'required|min:1|max:255',
         'description'   => 'required|min:1|max:5000',
         'country'       => 'required|min:1|max:255',
-        'hero_image_id' => 'required|integer|min:1|max:4294967295',
-        'rating'        => 'required|numeric|min:1|max:4294967295',
+        'hero_image_id' => 'required|integer|min:0|max:4294967295',
+        'rating'        => 'required|numeric|min:0|max:4294967295',
     ];
 
     public $messages = [

@@ -3,14 +3,15 @@
 namespace App\Modules\Hookah\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\State;
 use App\Modules\Hookah\Model\Category;
 use App\Modules\Hookah\Model\Mix;
 use App\Modules\Hookah\Model\MixTobacco;
+use App\Modules\Hookah\Model\Vendor;
 use App\Modules\Logger\Controllers\LoggerController;
 use App\Interfaces\ModuleInterface;
 use App\Exceptions\CustomException;
 use App\Modules\User\Model\User;
-use function foo\func;
 use Illuminate\Http\Request;
 
 class MixController extends Controller implements ModuleInterface
@@ -133,13 +134,20 @@ class MixController extends Controller implements ModuleInterface
     public function getMixById($id, $json = true)
     {
         User::can('hookah_viewmix', true);
+        $User = State::User();
+
         $Mix = Mix::where('id', $id)->with([
             'category',
             'tobacco' => function($q) {
                 $q->with('vendor');
+            },
+            'bookmarks' => function ($q) use ($User) {
+                if ($User) $q->where('user_id', $User['id'])->first();
+                else       $q->where('user_id', 0)->first();
             }
         ])->first();
         if (!$Mix) throw new CustomException(['id' => $id], [], 404, 'Микс не найден');
+
 
         return ($json) ? parent::response(['id' => $id], $Mix, 200) : $Mix;
     }
@@ -167,4 +175,90 @@ class MixController extends Controller implements ModuleInterface
 
         return parent::response(['id' => $id], $Mix->delete(), 200);
     }
+
+    public function parseFromFile() {
+        $path = '/home/admin/web/coub.lets-code.ru/public_html/public/other/mixes.txt';
+        $file = file_get_contents($path);
+        $rows = explode('|||', $file);
+        $Mixes = [];
+        $AllVendors = Vendor::where('name', '!=', '')->get()->keyBy('name');
+
+        foreach ($rows as $row) {
+            $Mix = [
+                'name'         => null,   //название микса
+                'description'  => null,   //описание
+                'stowage'      => [],     //укладка табака
+                'coal'         => '3-4',  //количество углей
+                'liquid'       => 'Вода', //наполнение колбы
+                'additionally' => null,   //дополнительная информация,
+                'rating'       => 0,
+                'tobacco'      => []
+            ];
+            $Stowage = [];
+            $Flavors = explode(',', $row);
+
+            foreach ($Flavors as $Flavor) {
+                $Flavor = explode('||', $Flavor);
+
+                foreach ($Flavor as &$String) {
+                    $String = trim(preg_replace('/\s{2,}/', ' ', $String));
+                } unset($String);
+
+                $VendorId = null;
+                if (isset($AllVendors[$Flavor[0]])) $VendorId = $AllVendors[$Flavor[0]]['id'];
+
+                $Stowage[] = $Flavor[1];
+                $Mix['tobacco'][] = [
+                    'mix_id'    => '',
+                    'vendor_id' => $VendorId,
+                    'percent'   => str_replace('%', '', $Flavor[2]),
+                    'flavor'    => $Flavor[1]
+                ];
+            }
+
+            $Mix['name'] = strtolower(implode($Stowage, ', '));
+            $Mix['stowage'] = $Stowage;
+            $Mixes[] = $Mix;
+        }
+
+        foreach ($Mixes as $mix) {
+            $ExistMix = Mix::where('name', $mix['name'])
+                ->where('description',     $mix['description'])
+                ->where('coal',            $mix['coal'])
+                ->where('liquid',          $mix['liquid'])
+                ->first();
+            if (!$ExistMix) {
+                $NewMix = new Mix();
+                $NewMix->name         = $mix['name'];
+                $NewMix->description  = $mix['description'];
+                $NewMix->stowage      = $mix['stowage'];
+                $NewMix->coal         = $mix['coal'];
+                $NewMix->liquid       = $mix['liquid'];
+                $NewMix->additionally = $mix['additionally'];
+                $NewMix->rating       = $mix['rating'];
+                $NewMix->save();
+                $NewMix->category()->sync([9]); //добавляем в категорию "На воде"
+
+                foreach ($mix['tobacco'] as $tobacco) {
+                    $ExistMixesTobacco = MixTobacco::where('mix_id', $NewMix->id)
+                        ->where('vendor_id', $tobacco['vendor_id'])
+                        ->where('percent', $tobacco['percent'])
+                        ->where('flavor', $tobacco['flavor'])
+                        ->first();
+                    if (!$ExistMixesTobacco) {
+                        $NewExistMixesTobacco = new MixTobacco();
+                        $NewExistMixesTobacco->mix_id    = $NewMix->id;
+                        $NewExistMixesTobacco->vendor_id = $tobacco['vendor_id'];
+                        $NewExistMixesTobacco->percent   = $tobacco['percent'];
+                        $NewExistMixesTobacco->flavor    = $tobacco['flavor'];
+                        $NewExistMixesTobacco->save();
+                    }
+                }
+            }
+        }
+
+        $result = $Mixes;
+        return parent::response([], $result, 200);
+    }
+
 }

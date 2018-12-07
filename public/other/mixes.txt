@@ -1,0 +1,110 @@
+Fumari   || Spice chai            || 50%,  Spectrum || Caribbean rum         || 50% |||
+Fumari   || Red gummi bear        || 40%,  Spectrum || Grape soda            || 60% |||
+Serbetli || Ice-watermelon        || 40%,  Serbetli || Rasberry              || 60% |||
+Serbetli || Chocolate             || 70%,  Serbetli || Mint                  || 30% |||
+Serbetli || Ice bodrum tangirine  || 70%,  Serbetli || Ice with berry        || 30% |||
+Serbetli || Cola                  || 70%,  Serbetli || Lemon                 || 30% |||
+Serbetli || Banana strawberry     || 40%,  Serbetli || Rotana                || 60% |||
+Serbetli || Lemon                 || 40%,  Serbetli || Coffee latte          || 60% |||
+Serbetli || Cranberry             || 70%,  Serbetli || Milk                  || 30% |||
+Serbetli || Milk                  || 40%,  Serbetli || Nostalgia             || 60% |||
+Serbetli || Coffee latte          || 60%,  Serbetli || Coconut               || 40% |||
+Serbetli || Lemon pie aromali     || 40%,  Serbetli || Ice with berry        || 60% |||
+Serbetli || Lemon pie aromali     || 60%,  Serbetli || Pistachio-ice cream   || 40% |||
+Serbetli || Cola                  || 85%,  Serbetli || Mint                  || 15% |||
+Serbetli || Ice with Berry        || 50%,  Serbetli || Orange                || 50% |||
+Serbetli || Ice with Berry        || 50%,  Serbetli || Rotana                || 50% |||
+Serbetli || ice bodrum tangirine  || 70%,  Serbetli || Mojito                || 30% |||
+Serbetli || Ice lemon             || 50%,  Serbetli || Ice blue berry        || 50% |||
+Serbetli || Ice grapefruit        || 50%,  Serbetli || Lemon                 || 50% |||
+Serbetli || Istanbul nights       || 70%,  Serbetli || Ice                   || 30% |||
+Serbetli || Cactus                || 60%,  Serbetli || Bluebrry              || 40% |||
+Serbetli || Banana strawberry     || 60%,  Serbetli || Chocolate milk        || 40% |||
+Serbetli || Blueberry             || 70%,  Serbetli || Ice grape berry       || 30% |||
+Serbetli || Watermelon            || 50%,  Serbetli || Bluberry              || 50% |||
+Serbetli || Blueberry             || 70%,  Serbetli || Gum                   || 30% |||
+Serbetli || Ice lemon             || 70%,  Serbetli || Lemon pie aromali     || 30% |||
+Serbetli || Cappuccino            || 90%,  Serbetli || Ice                   || 10% |||
+Serbetli || Cactus                || 30%,  Serbetli || Ice apple             || 70% |||
+Serbetli || Guava                 || 30%,  Serbetli || Rotana                || 70% |||
+Serbetli || Orange with Cream     || 70%,  Serbetli || Ice bodrum tangirine  || 30% |||
+Serbetli || Cola                  || 70%,  Serbetli || Berry                 || 30% |||
+Serbetli || Ice strawberry        || 60%,  Serbetli || Lemon pie aromali     || 40% |||
+Serbetli || Rotana                || 50%,  Serbetli || Cranberry             || 50% |||
+Serbetli || Ice grapefruit        || 50%,  Serbetli || Cherry                || 50% |||
+Darkside || Original              || 30%,  Darkside || Bananapapa            || 70% |||
+Darkside || Falling stars         || 50%,  Darkside || Lemonblast            || 50% |||
+Darkside || Redberry              || 60%,  Darkside || Red tea               || 40% |||
+Darkside || Icecream              || 30%,  Darkside || Strawberry light      || 70% |||
+Darkside || Supernova             || 15%,  Darkside || Neonmelon             || 85% |||
+Darkside || Mango lassi           || 40%,  Darkside || Bananapapa            || 60% |||
+Darkside || Bounty hunter         || 40%,  Darkside || French macaroon       || 60% |||
+Darkside || Icecream              || 70%,  Darkside || Supernova             || 30% |||
+Darkside || Bergamonstr           || 70%,  Darkside || Orange                || 30% |||
+Darkside || Cosmo flower          || 50%,  Darkside || Bounty hunter         || 50% |||
+Darkside || Bananapapa            || 60%,  Darkside || Bounty hunter         || 40% |||
+Darkside || French macaroon       || 50%,  Darkside || Mango lassi           || 50% |||
+Darkside || Cola                  || 50%,  Darkside || Blueberryblast        || 50% |||
+Darkside || Neonmelon             || 90%,  Darkside || Mint                  || 10% |||
+Darkside || Exstragon             || 70%,  Darkside || Supernova             || 30% |||
+Darkside || Needls                || 40%,  Darkside || Pear                  || 60% |||
+Darkside || PineStar              || 60%,  Darkside || Generis cherry        || 40% |||
+Darkside || Mango lassi           || 60%,  Darkside || Pear                  || 40% |||
+Darkside || Virgin peach          || 75%,  Darkside || Basil blast           || 25% |||
+Darkside || Virgin peach          || 70%,  Darkside || Mary Jane             || 30% |||
+Darkside || Nutz                  || 70%,  Darkside || BananaPapa            || 30% |||
+Darkside || Admiral acbar cereal  || 60%,  Darkside || Spicy pear            || 40% |||
+Darkside || Cola                  || 35%,  Darkside || Lemonblast            || 65% |||
+Serbetli || Ice with berry        || 40%,  Serbetli || Blueberry             || 40%,  Serbetli  || Lemon                || 20% |||
+Serbetli || Orange                || 50%,  Serbetli || Mint                  || 20%,  Serbetli  || Two apple            || 30% |||
+Serbetli || Lemon pie aromali     || 33%,  Serbetli || Mojito                || 33%,  Serbetli  || Cactus               || 33% |||
+Serbetli || Lemon pie aromali     || 50%,  Serbetli || Mint                  || 25%,  Serbetli  || Lemon                || 25% |||
+Serbetli || Peach                 || 60%,  Serbetli || Coconut               || 20%,  Serbetli  || Chocolate            || 20% |||
+Serbetli || Pineapple             || 40%,  Serbetli || Peach                 || 30%,  Serbetli  || Mango                || 30% |||
+Serbetli || Pina colada           || 50%,  Serbetli || Cactus                || 25%,  Serbetli  || Ice bodrum tangirine || 25% |||
+Serbetli || Ice blueberry         || 30%,  Serbetli || Ice apple             || 40%,  Serbetli  || Ice lemon            || 30% |||
+Serbetli || Rotana                || 50%,  Serbetli || Ecstasy               || 40%,  Serbetli  || Adalya lemon pie     || 10% |||
+Serbetli || Bodrum tangirine      || 33%,  Serbetli || Guava                 || 33%,  Serbetli  || Cactus               || 33% |||
+Serbetli || Ganita                || 40%,  Serbetli || Garefruit             || 40%,  Serbetli  || Mentol               || 10% |||
+Darkside || Needls                || 40%,  Darkside || Lemonblast            || 30%,  Darkside  || Barvy orange         || 30% |||
+Darkside || Cookie                || 30%,  Darkside || Ice cream             || 30%,  Spectrum  || Carribbean rum       || 50% |||
+Darkside || Cola                  || 30%,  Darkside || Pear                  || 60%,  Darkside  || Supernova            || 10% |||
+Darkside || Goal                  || 30%,  Darkside || Pear                  || 40%,  Darkside  || BarberryGum          || 30% |||
+Darkside || Ice cream             || 30%,  Darkside || Pear                  || 40%,  Darkside  || Eclipse              || 30% |||
+Darkside || Icecream              || 30%,  Darkside || Mangolassi            || 40%,  Musthave  || Pineapple            || 30% |||
+Darkside || Pear                  || 50%,  Darkside || Cinnamoon             || 20%,  Fumari    || Spiced chai          || 30% |||
+Darkside || Torpedo               || 40%,  Fumari   || White bear            || 30%,  Fumari    || Mandarin zest        || 30% |||
+Darkside || Barvy orange          || 40%,  Fumari   || Tangelo               || 30%,  Spectrum  || Citrusmix            || 30% |||
+Fumari   || White gummi bear      || 30%,  Musthave || Pineapple rings       || 30%,  Darkside  || Bananapapa           || 30% |||
+Fumari   || RedGummyBear          || 40%,  Darkside || Redberry              || 30%,  Darkside  || Eclipse              || 30% |||
+Adalya   || Love                  || 40%,  Adalya   || Blueberry-mint        || 30%,  Al Fakher || Buble gum            || 30% |||
+Serbetli || Istanbul nights       || 60%,  Serbetli || Ice apple             || 30%,  Afzal     || Aniceed              || 10% |||
+Darkside || Redberry              || 40%,  Darkside || Redtea                || 25%,  Darkside  || Cookie               || 35% |||
+Darkside || Falling stars         || 50%,  Darkside || Barvy orange          || 30%,  Darkside  || Pear                 || 20% |||
+Darkside || Pear                  || 40%,  Darkside || Barvy orange          || 40%,  Darkside  || Lemonblast           || 20% |||
+Darkside || Mangolassi            || 30%,  Darkside || Ice cream             || 40%,  Darkside  || Bananapapa           || 30% |||
+Darkside || Strawberry            || 30%,  Darkside || Bananapapa            || 30%,  Darkside  || Admiral akbar        || 40% |||
+Darkside || Bananapapa            || 40%,  Darkside || Cola                  || 30%,  Darkside  || Falling stars        || 30% |||
+Darkside || Bananapapa            || 20%,  Darkside || Lemonblast            || 40%,  Darkside  || Mango lassi          || 40% |||
+Darkside || Bergamonstr           || 40%,  Darkside || Mango lassi           || 40%,  Darkside  || Kallee grapefruit    || 20% |||
+Darkside || Deep blue sea         || 50%,  Darkside || Bannanapapa           || 35%,  Darkside  || Bounty hunter        || 15% |||
+Darkside || Supernova             || 20%,  Darkside || Generis raspberry     || 50%,  Darkside  || Generis cherry       || 30% |||
+Darkside || Virgin peach          || 45%,  Darkside || Strawberry light      || 45%,  Darkside  || Supernova            || 10% |||
+Darkside || Red tea               || 40%,  Darkside || Admiral acbar cereal  || 20%,  Darkside  || Icecream             || 40% |||
+Darkside || Raw rare              || 50%,  Darkside || Cola                  || 40%,  Darkside  || Gonzo mint           || 10% |||
+Darkside || Blackcurrant          || 50%,  Darkside || Generis cherry        || 40%,  Darkside  || Supernova            || 10% |||
+Darkside || Mango lassi           || 35%,  Darkside || Strawberry light      || 35%,  Darkside  || Basil blast          || 30% |||
+Darkside || Bergamonstr           || 30%,  Darkside || Pear                  || 40%,  Darkside  || Cola                 || 30% |||
+Darkside || Cola                  || 40%,  Darkside || Mango lassi           || 30%,  Darkside  || Bananapapa           || 30% |||
+Darkside || Pear                  || 40%,  Darkside || Basil blast           || 40%,  Darkside  || Supernova            || 20% |||
+Darkside || French macaroon       || 30%,  Darkside || Red tea               || 60%,  Darkside  || Mint                 || 10% |||
+Darkside || Nutz                  || 60%,  Darkside || Pear                  || 20%,  Darkside  || BananaPapa           || 10% |||
+Darkside || French macaroon       || 40%,  Darkside || Deep blue sea         || 30%,  Darkside  || Admiral acbar cereal || 30% |||
+Darkside || Nutz                  || 55%,  Darkside || Deep blue sea         || 25%,  Darkside  || Cookie               || 20% |||
+Darkside || Bounty hunter         || 40%,  Darkside || Nutz                  || 40%,  Darkside  || Icecream             || 20% |||
+Darkside || Cosmo flower          || 45%,  Darkside || Cola                  || 25%,  Darkside  || Supernova            || 30% |||
+Darkside || Red tea               || 30%,  Darkside || Mint                  || 10%,  Darkside  || Cola                 || 60% |||
+Darkside || Wildberry             || 40%,  Darkside || Supernova             || 10%,  Darkside  || Red Tea              || 50% |||
+Darkside || Bounty hunter         || 30%,  Darkside || Ginger ale cookies    || 40%,  Darkside  || Icecream             || 30% |||
+Darkside || Cookie                || 50%,  Darkside || Needls                || 40%,  Darkside  || Mint                 || 10% |||
+Darkside || Сola                  || 40%,  Darkside || Supernova             || 20%,  Darkside  || Red tea              || 40%

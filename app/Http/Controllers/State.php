@@ -2,16 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Modules\Companies\Model\Invites;
 use App\Modules\User\Controllers\UserController;
-use Illuminate\Http\Response;
-use Illuminate\Foundation\Bus\DispatchesJobs;
+
 use Illuminate\Routing\Controller as BaseController;
-use Illuminate\Foundation\Validation\ValidatesRequests;
-use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
-use App\Interfaces\ControllerInterface;
-use League\Flysystem\Exception;
-use App\Exceptions\CustomException;
 use App\Modules\User\Model\User;
 
 /**
@@ -80,22 +73,6 @@ class State extends BaseController
 
         $UserController = new UserController();
         $user['isAdmin'] = $UserController->isAdmin($user->login, false);
-
-        $Roles = []; $CompaniesToAddProduct = [];
-        $Invites = Invites::where('user_id', $user->id)->where('invite', 2)->with('company')->get();
-        $Companies = $user->companies()->get();
-        foreach ($Invites as $invite) {
-            $Roles[$invite->company_id] = $invite->role;
-            if (in_array($invite->role, ['admin', 'manager'])) {
-                $CompaniesToAddProduct[$invite->company->id] = $invite->company;
-            }
-        }
-        foreach ($Companies as $company) {
-            $Roles[$company->id] = 'admin';
-            $CompaniesToAddProduct[$company->id] = $company;
-        }
-        $user->roles = $Roles;
-        $user->companies_to_add_products = array_values($CompaniesToAddProduct);
         $this->user = $user;
         return $this->user;
     }

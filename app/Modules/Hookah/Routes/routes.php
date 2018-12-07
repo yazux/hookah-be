@@ -39,6 +39,16 @@ Route::group([
         Route::post(  '/mix',      ['uses' => 'MixController@postMix'      ]);
         Route::put(   '/mix',      ['uses' => 'MixController@putMix'       ]);
         Route::delete('/mix/{id}', ['uses' => 'MixController@deleteMixById']);
+
+        Route::get(   '/bookmark',      ['uses' => 'BookmarkController@getBookmarks'      ]);
+        Route::get(   '/bookmark/{id}', ['uses' => 'BookmarkController@getBookmarkById'   ]);
+        Route::post(  '/bookmark',      ['uses' => 'BookmarkController@postBookmark'      ]);
+        Route::put(   '/bookmark',      ['uses' => 'BookmarkController@putBookmark'       ]);
+        Route::delete('/bookmark/{id}', ['uses' => 'BookmarkController@deleteBookmarkById']);
+        Route::delete('/bookmark',      ['uses' => 'BookmarkController@deleteBookmark'    ]);
+
+
+        Route::get('/parse_mix', ['uses' => 'MixController@parseFromFile']);
     }
 );
 

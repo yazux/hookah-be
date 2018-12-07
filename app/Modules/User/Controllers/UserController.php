@@ -3,7 +3,6 @@
 namespace App\Modules\User\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Modules\Companies\Model\Invites;
 use App\Modules\Logger\Controllers\LoggerController;
 use App\Modules\Properties\Controllers\FileController;
 use App\Modules\User\Model\Group;
@@ -321,7 +320,7 @@ class UserController extends Controller implements ModuleInterface
             $data['login'] = preg_replace(
                 '/[^a-zA-Zа-яА-Я0-9]/ui', '',
                 substr($data['email'], 0, stripos($data['email'], '@'))
-            );
+            ) . '_' . time();
         }
 
         if (User::valid($data, 'post', new User())) {
@@ -357,7 +356,7 @@ class UserController extends Controller implements ModuleInterface
             if ($newUser) {
 
                 //отпраляем email с подтверждением почты
-                $this->getConfirmEmail($newUser->id, false);
+                //$this->getConfirmEmail($newUser->id, false);
 
                 $request->replace([
                     'login'    => $data['email'],

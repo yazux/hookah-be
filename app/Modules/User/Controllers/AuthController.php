@@ -61,17 +61,14 @@ class AuthController extends Controller implements ModuleInterface
     public function login( Request $request )
     {
         $data = $request->only(['login', 'password', 'login_auth']);
-
-        if (!array_key_exists('login_auth', $data) || $data['login_auth'] == null) {
-            $data['login_auth'] = false;
-        }
+        if (!array_key_exists('login_auth', $data) || $data['login_auth'] == null) $data['login_auth'] = false;
 
         //проверим тип авторизации и найдём пользователя для авторизации
         if ($data['login_auth']) {
             $UserData = User::where('login', $data['login'])->first();
             //если пользователя не нашли
             if (!$UserData || $UserData == null) {
-                throw new CustomDBException(
+                throw new CustomException(
                     $data, $UserData, 404,
                     'Пользователь с логином "'.$data['login'].'" не найден'
                 );
@@ -80,7 +77,7 @@ class AuthController extends Controller implements ModuleInterface
             $UserData = User::where('email', $data['login'])->first();
             //если пользователя не нашли
             if (!$UserData || $UserData == null) {
-                throw new CustomDBException(
+                throw new CustomException(
                     $data, $UserData, 404,
                     'Пользователь с email "'.$data['login'].'" не найден'
                 );

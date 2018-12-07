@@ -27,6 +27,11 @@
       "code": "mix",
       "model": "App\\Modules\\Hookah\\Model\\Mix",
       "name": "Микс"
+    },
+    "Bookmark": {
+      "code": "bookmark",
+      "model": "App\\Modules\\Hookah\\Model\\Bookmark",
+      "name": "Закладка"
     }
   },
   "dependencies": [],
@@ -36,7 +41,11 @@
     "hookah_viewcategory",
     "hookah_viewline",
     "hookah_viewtobacco",
-    "hookah_viewmix"
+    "hookah_viewmix",
+    "hookah_postbookmark",
+    "hookah_putbookmark",
+    "hookah_deletebookmark",
+    "hookah_viewbookmark"
   ],
   "actions": {
     "hookah_access": {
@@ -155,6 +164,29 @@
       "code": "hookah_viewmix",
       "name": "Просмотр микса",
       "description": ""
+    },
+
+
+    "hookah_postbookmark": {
+      "code": "hookah_postbookmark",
+      "name": "Добавление закладки",
+      "description": ""
+    },
+    "hookah_putbookmark": {
+      "code": "hookah_putbookmark",
+      "name": "Изменение закладки",
+      "description": ""
+    },
+    "hookah_deletebookmark": {
+      "code": "hookah_deletebookmark",
+      "name": "Удаление закладки",
+      "description": ""
+    },
+    "hookah_viewbookmark": {
+      "code": "hookah_viewbookmark",
+      "name": "Просмотр закладки",
+      "description": ""
     }
+
   }
 }

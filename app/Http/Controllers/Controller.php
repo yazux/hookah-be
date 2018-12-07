@@ -303,20 +303,15 @@ class Controller extends BaseController implements ControllerInterface
                     if (isset($model['model'])) {
                         $fields = [];
                         $with = false;
-                        if (isset($model['fields']) && is_array($model['fields'])) {
+                        if (isset($model['fields']) && is_array($model['fields']))
                             $fields = $model['fields'];
-                        }
 
-                        if (isset($model['with'])) {
-                            $with = $model['with'];
-                        }
+                        if (isset($model['with'])) $with = $model['with'];
 
                         $Model = $model['model'];
                         //смотрим какие поля доступны для выборки
                         //если их не передали из контроллера
-                        if (!count($fields)) {
-                            $fields = $Model::fields();
-                        }
+                        if (!count($fields)) $fields = $Model::fields();
 
                         //выбираем их из связаной модели
                         $result->with(
