@@ -32,6 +32,11 @@
       "code": "bookmark",
       "model": "App\\Modules\\Hookah\\Model\\Bookmark",
       "name": "Закладка"
+    },
+    "MixRating": {
+      "code": "mixrating",
+      "model": "App\\Modules\\Hookah\\Model\\MixRating",
+      "name": "Оценка микса"
     }
   },
   "dependencies": [],
@@ -45,7 +50,11 @@
     "hookah_postbookmark",
     "hookah_putbookmark",
     "hookah_deletebookmark",
-    "hookah_viewbookmark"
+    "hookah_viewbookmark",
+    "hookah_postmixrating",
+    "hookah_putmixrating",
+    "hookah_deletemixrating",
+    "hookah_viewmixrating"
   ],
   "actions": {
     "hookah_access": {
@@ -185,6 +194,28 @@
     "hookah_viewbookmark": {
       "code": "hookah_viewbookmark",
       "name": "Просмотр закладки",
+      "description": ""
+    },
+
+
+    "hookah_postmixrating": {
+      "code": "hookah_postmixrating",
+      "name": "Добавление оценки миксу",
+      "description": ""
+    },
+    "hookah_putmixrating": {
+      "code": "hookah_putmixrating",
+      "name": "Изменение изменение оценки миксу",
+      "description": ""
+    },
+    "hookah_deletemixrating": {
+      "code": "hookah_deletemixrating",
+      "name": "Удаление оценки микса",
+      "description": ""
+    },
+    "hookah_viewmixrating": {
+      "code": "hookah_viewmixrating",
+      "name": "Просмотр оценки микса",
       "description": ""
     }
 

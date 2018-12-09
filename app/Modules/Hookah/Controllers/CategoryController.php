@@ -91,11 +91,11 @@ class CategoryController extends Controller implements ModuleInterface
     public function getCategories(Request $request)
     {
         User::can('hookah_viewcategory', true);
-        return parent::response(
-            $request->all(),
-            parent::dbGet(new Category(), $request, [], []),
-            200
-        );
+        $result = parent::dbGet(new Category(), $request, [], [], false, ['mixes']);
+
+        //$result = Category::where('id', '!=', '')->whereHas('mixes')->get();
+
+        return parent::response($request->all(), $result, 200);
     }
 
     /**
@@ -112,7 +112,7 @@ class CategoryController extends Controller implements ModuleInterface
     {
         User::can('hookah_viewcategory', true);
         $Category = Category::where('id', $id)->first();
-        if (!$Category) throw new CustomException(['id' => $id], [], 404, 'Категория не найден');
+        if (!$Category) throw new CustomException(['id' => $id], [], 404, 'Категория не найдена');
 
         return ($json) ? parent::response(['id' => $id], $Category, 200) : $Category;
     }

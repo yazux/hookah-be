@@ -40,6 +40,12 @@ Route::group([
         Route::put(   '/mix',      ['uses' => 'MixController@putMix'       ]);
         Route::delete('/mix/{id}', ['uses' => 'MixController@deleteMixById']);
 
+        Route::get(   '/rating/mix',      ['uses' => 'MixRatingController@getMixRatings'      ]);
+        Route::get(   '/rating/mix/{id}', ['uses' => 'MixRatingController@getMixRatingById'   ]);
+        Route::post(  '/rating/mix',      ['uses' => 'MixRatingController@postMixRating'      ]);
+        Route::put(   '/rating/mix',      ['uses' => 'MixRatingController@putMixRating'       ]);
+        Route::delete('/rating/{id}',     ['uses' => 'MixRatingController@deleteMixRatingById']);
+
         Route::get(   '/bookmark',      ['uses' => 'BookmarkController@getBookmarks'      ]);
         Route::get(   '/bookmark/{id}', ['uses' => 'BookmarkController@getBookmarkById'   ]);
         Route::post(  '/bookmark',      ['uses' => 'BookmarkController@postBookmark'      ]);
@@ -47,8 +53,8 @@ Route::group([
         Route::delete('/bookmark/{id}', ['uses' => 'BookmarkController@deleteBookmarkById']);
         Route::delete('/bookmark',      ['uses' => 'BookmarkController@deleteBookmark'    ]);
 
-
-        Route::get('/parse_mix', ['uses' => 'MixController@parseFromFile']);
+        //парсинг миксов из файла
+        //Route::get('/parse_mix', ['uses' => 'MixController@parseFromFile']);
     }
 );
 

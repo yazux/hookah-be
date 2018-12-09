@@ -144,7 +144,11 @@ class MixController extends Controller implements ModuleInterface
             'bookmarks' => function ($q) use ($User) {
                 if ($User) $q->where('user_id', $User['id'])->first();
                 else       $q->where('user_id', 0)->first();
-            }
+            },
+            'userRating' => function ($q) use ($User) {
+                if ($User) $q->where('user_id', $User['id'])->first();
+                else       $q->where('user_id', 0)->first();
+            },
         ])->first();
         if (!$Mix) throw new CustomException(['id' => $id], [], 404, 'Микс не найден');
 

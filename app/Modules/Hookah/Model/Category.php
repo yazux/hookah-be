@@ -30,4 +30,17 @@ class Category extends BaseModel
         'description.min'      => "Минимальная длина значения поля 'Описание' - 1 символ",
         'description.max'      => "Максимальная длина значения поля 'Описание' - 5000 символов"
     ];
+
+    /**
+     * Связь с миксами
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function mixes()
+    {
+        return $this->belongsToMany(
+            'App\Modules\Hookah\Model\Mix',
+            'module_hookah_mix_category', 'category_id', 'mix_id'
+        );
+    }
 }

@@ -191,13 +191,14 @@ class Controller extends BaseController implements ControllerInterface
      * @param array                $filter    - массив с правилами фильтрации
      * @param array                $relations - массив отношений
      * @param boolean              $get       - флаг возврата выборки или объекта
+     * @param array                $relationCount - массив с отношениями, количество которых надо посчитать
      *
      * @return mixed
      * @throws CustomException
      */
     public static function dbGet(
         ModuleModelInterface $model, Request $request,
-        $filter = [], $relations = [], $get = false
+        $filter = [], $relations = [], $get = false, $relationCount = []
     ) {
         $data = $request->only('page', 'count', 'order_by', 'order_type', 'filter');
         //получим поля модели, доступные для выборки
@@ -210,6 +211,9 @@ class Controller extends BaseController implements ControllerInterface
             ($data['order_by']   && in_array($data['order_by'], $_fields)) ? $data['order_by'] : 'id',
             ($data['order_type'] && in_array($data['order_type'], ['asc','desc'])) ? $data['order_type'] : 'asc'
         );
+
+        if ($relationCount && count($relationCount)) $result = $result->withCount($relationCount);
+
         //если в запросе есть фильтр
         if (isset($data['filter'])) {
             //читаем массив с фильтром
@@ -219,11 +223,18 @@ class Controller extends BaseController implements ControllerInterface
             //проверим ошибки декодирования
             $JSONError = self::getJsonTestStatus();
             //если json считался c ошибками, то скажем пользователю об этом
-            if ($JSONError) {
-                throw new CustomException($data['filter'], false, 500, $JSONError);
-            }
+            if ($JSONError) throw new CustomException($data['filter'], false, 500, $JSONError);
             $filter = $data['filter'];
             $request->merge(['filter' => $filter]);
+        }
+
+
+        if(isset($filter['has_relation']) && is_array($filter['has_relation'])) {
+            foreach ($filter['has_relation'] as $relation) {
+                if (is_string($relation) && method_exists($model, $relation))
+                    $result = $result->whereHas($relation);
+            }
+            if (!isset($filter['model']) && !isset($filter['relation'])) $filter = [];
         }
 
         $relationsFilter = false;
@@ -236,6 +247,8 @@ class Controller extends BaseController implements ControllerInterface
             $relationsFilter = $filter['relation'];
             $filter = [];
         }
+
+
 
         //если передали массив фильтров
         //и он не является массивом с фильтрами,
